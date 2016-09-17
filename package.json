@@ -1,0 +1,14 @@
+{
+  "name": "myblog",
+  "version": "0.0.1",
+  "description": "blog in MEAN ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hrodberaht",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
