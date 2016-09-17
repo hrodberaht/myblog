@@ -4,11 +4,15 @@ var path = require('path');
 
 var app = express();
 
-var homepage = require('./app_server/client/routes/homepage');
-var page404 = require('./app_server/client/routes/page404')
-
+app.use('/public',express.static(path.join(__dirname, '/public')));
 app.set('views', path.join(__dirname, 'app_server/client/views'));
 app.set('view engine', 'ejs');
+
+
+var homepage = require('./app_server/client/routes/homepage');
+var page404 = require('./app_server/client/routes/page404');
+var about = require('./app_server/client/routes/about');
+
 
 
 
@@ -16,6 +20,7 @@ app.use(morgan('dev'));
 
 
 app.get('/', homepage);
+app.get('/about', about);
 
 
 app.use(page404);
