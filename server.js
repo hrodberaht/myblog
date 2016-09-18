@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+require('./app_server/client/models/db');
 
 var app = express();
 
